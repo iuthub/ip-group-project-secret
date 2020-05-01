@@ -1,4 +1,4 @@
-<?php include "links.php" ?>
+<?php include 'links.php'?>
 <?php include 'header.php'?>
 	<body>
 <section id="main-slider" class="no-margin">
@@ -48,10 +48,10 @@
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="icon-angle-left"></i>
+            <i class="icon-angle-left"><img src="img/guide/left.png" alt=""></i>
         </a>
         <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="icon-angle-right"></i>
+            <i class="icon-angle-right"><img src="img/guide/right.png" alt=""></i>
         </a>
     </section><!--/#main-slider-->
 
