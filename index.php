@@ -54,8 +54,6 @@
             <i class="icon-angle-right"><img src="img/guide/right.png" alt=""></i>
         </a>
     </section><!--/#main-slider-->
-
-	
 		<!-- Call to Action Bar -->
 	    <div class="section section-dark">
 			<div class="container">
@@ -74,7 +72,7 @@
     <div>
     <div id="id001" class="modal">
       <div class="modal-dialog">
-      <form class="modal-content animate" action="customer/registration.php" method="POST">
+      <form class="modal-content animate" action="  " method="POST">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id001').style.display='none'" class="close" title="Close Modal">&times;</span>
           <H3 align="center">Sign up</H3>
@@ -98,8 +96,6 @@
         <input type="password" class="form-control" name="cpass" placeholder="Confirm Password..." id="cpwd">
       </div>
           <input type="checkbox" checked="checked"> Remember me
-          
-
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('id001').style.display='none'" class="cancelbtn">Cancel</button>
             <button type="submit" class="signupbtn" name="btn-signup">Sign Up</button>
@@ -291,7 +287,7 @@
     						<figcaption>
     							<h3><?php echo $Row['model_name']; ?></h3>
     							<span class="actual"><h5><i><strong>Starting MRP $<?php echo $Row['s_price']; ?></strong></i></h5></span>
-    							<a href="portfolio-item.php">Take a look</a>
+    							<a href="  ">Take a look</a>
     						</figcaption>
     					</figure>
 	        	</div>
