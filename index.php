@@ -1,84 +1,6 @@
-<!DOCTYPE html>
-<<html class="no-js">
-<html lang="en">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Team Secret">
-
-    <title>MyGarage</title>
-	
-	 <!-- Bootstrap Core CSS --> 
-	 <link href="css/bootstrap.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link href="css/main.css" rel="stylesheet" >
-<link href="css/custom.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/popup1.css">
-<link rel="stylesheet" type="text/css" href="css/imgmodel.css">
-	
+<?php include "links.php" ?>
+<?php include 'header.php'?>
 	<body>
-    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                    <a class="navbar-brand" href="index.php">MyGarage</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Media</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Client Login</a></li>
-                    <li><a href=""><span class="glyphicon glyphicon-log-in"></span>Admin Login</a></li> 
-                </ul>
-            </div>
-        </div>
-        </div>
-
-<!-- popup -->
-<div>
- <!--  for Log In -->
-<div id="id002" class="modal">
-  <div class="modal-dialog">
-  <form class="modal-content animate" action="loggin.php" method="POST">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id002').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <H3 align="center">Log In</H3>
-    </div>
-
-    <div class="container">
-    <div class="col-sm-4" > 
-      <div class="form-group">   
-          <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" placeholder="Email..." id="email">
-          <label for="pwd">Password:</label>
-        <input type="password" class="form-control" name="password" placeholder="Password..." id="pwd">
-      </div>
-      <input type="checkbox" checked="checked"> Remember me
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id002').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" >Log In</button>
-      </div>
-    </div>
-    </div> 
-  </form>
-  </div>
-</div>
-<!-- end Log In-->
-
-</div>
-</header>
-</head>
-
 <section id="main-slider" class="no-margin">
         <div class="carousel slide">
             <ol class="carousel-indicators">
@@ -157,9 +79,7 @@
           <span onclick="document.getElementById('id001').style.display='none'" class="close" title="Close Modal">&times;</span>
           <H3 align="center">Sign up</H3>
         </div>
-
         <div class="container">
-      
         <div class="col-sm-4" > 
           <div class="form-group">
               <label for="fname">Firstname</label>
@@ -197,8 +117,6 @@
     // Get the modal
     var modal = document.getElementById('id001');
     var modal1=document.getElementById('id002');
-
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
@@ -209,8 +127,6 @@
         }
     }
     </script>
-
-
 		<!-- Services -->
         <!-- Services -->
       <div class="section section-white">
@@ -218,7 +134,6 @@
       		<div class="row-4">
       			<div class="section-title">
       				<h1><span style="color: #aec62c; text-transform:uppercase; font-size:50px;">Brands</span></h1>
-
       			</div>
       			<ul class="manufacture_logos">
       				<div class="col-md-4 col-sm-6">
@@ -360,10 +275,8 @@
       		</div>
       	</div>
       </div>
-
 <hr>
 		<!-- Latest Cars -->	
-
         <div class="section section-white">
 	        <div class="container">
 	        	<div class="row">
@@ -371,8 +284,6 @@
 				<div class="section-title">
 				<h1>Our Recent Cars</h1>
 				</div>
-		
-		
 			<ul class="grid cs-style-3">
             <div class="col-md-4 col-sm-6">
     					<figure>
@@ -389,17 +300,13 @@
 	        </div>
 	    </div>
 		<!-- Latest Cars -->
-			
 <hr>
-
 		<!-- Manufacturer -->
 	    <div class="section">
 	    	<div class="container">
-			
 				<div class="section-title">
 				<h1>Manufacturers</h1>
 				</div>
-
 				<div class="clients-logo-wrapper text-center row">
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo1.jpg" alt="Client Name"></a></div>
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo2.jpg" alt="Client Name"></a></div>
@@ -418,43 +325,6 @@
 	    </div>
 	    <!-- Manufacturers -->
 	   	 <!-- Footer -->
- 
-	    <div class="footer">
-	    	<div class="container">
-			
-		    	<div class="row">
-				
-		    		<div class="col-footer col-md-4 col-xs-6">
-		    			<h3>Contact Us</h3>
-		    			<p class="contact-us-details">
-	        				<b>Address:</b> Tashkent Uzbekistan<br/>
-	        				<b>Phone:</b> (+998) 99 880 39 96<br/>
-	        	
-	        				<b>Email:</b> <a href="#">Cars@mygarage.uz</a>
-	        			</p>
-		    		</div>				
-		    		<div class="col-footer col-md-4 col-xs-6">
-		    			<h3>Our Social Networks</h3>
-						<p>You can find us on facebook and other social websites</p>
-		    			<div>
-		    				<img src="./img/icons/facebook.png" width="32" alt="Facebook">
-		    				<img src="./img/icons/twitter.png" width="32" alt="Twitter">
-		    				<img src="./img/icons/linkedin.png" width="32" alt="LinkedIn">
-							<img src="./img/icons/rss.png" width="32" alt="RSS Feed">
-						</div>
-		    		</div>
-		    		<div class="col-footer col-md-4 col-xs-6">
-		    			<h3>About Us</h3>
-		    				<p>This website is created by IUT students for Internet Programming class project </p>
-		    		</div>
-
-		    	</div>
-		    	<div class="row">
-		    		<div class="col-md-12">
-		    			<div class="footer-copyright">&copy; 2020 <a href="index.php">MyGarage</a> </div>
-		    		</div>
-		    	</div>
-		    </div>
-	    </div>
+		<?php include 'footer.php'?>
     </body>
 </html>
