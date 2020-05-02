@@ -1,9 +1,6 @@
 <?php
  ob_start();
  session_start();
-
- $error = true;
-
  if ( isset($_POST['btn-signup']) ) {
   
   // clean user inputs to prevent sql injections
@@ -65,7 +62,24 @@
   
   // password encrypt using md5();
   $password = md5($c_pass);
+  
+  // if there's no error, continue to signup
+  if( !$error ) 
+  {  
+   $query = "INSERT INTO `customers` (`cf_name`, `cl_name`, `c_email`, `c_pass`) VALUES ('$cf_name', '$cl_name', '$c_email','$c_pass')";
+   $res = mysql_query($query);
+    
+   if ($res) {
+    $errTyp = "success";
+    $errMSG = "Successfully registered, you may login now";
+    unset($cf_name);
+    unset($cl_name);
+    unset($c_email);
+    unset($c_pass);
+   } else {
+    $errTyp = "danger";
+    $errMSG = "Something went wrong, try again later..."; 
+   } 
+  }  
  }
-
-
 ?>
