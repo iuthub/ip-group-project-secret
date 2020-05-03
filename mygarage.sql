@@ -23,6 +23,13 @@ INSERT INTO `users` (`u_id`, `su`, `u_email`, `f_name`, `l_name`, `u_bday`, `u_p
 (9, 1, 'employee@employee.com', 'Mr', 'Employee', '2019-11-30', 'General Employee', 'Employee', 'fa5473530e4d1a5a1e1eb53d2fedb10c', '00202', 'Male', 'kkasd', NULL, NULL),
 (10, 1, 'admin@admin.com', 'Mr', 'Admin', '2019-11-30', 'Demo Admin', 'Admin', '21232f297a57a5a743894a0e4a801fc3', '00202', 'Male', 'kkasd', NULL, NULL);
 
+-- Indexes for table `users`
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`u_id`),
+  ADD UNIQUE KEY `email` (`u_email`);
+
+
 CREATE TABLE `customer` (
   `c_id` int(11) NOT NULL,
   `v_id` int(11) NOT NULL,
@@ -47,3 +54,13 @@ CREATE TABLE `customer` (
 INSERT INTO `customer` (`c_id`, `v_id`, `cf_name`, `cl_name`, `c_email`, `c_mobile`, `nid`, `w_start`, `w_end`, `payment_type`, `invoice_id`, `c_address`, `c_pass`, `extra`) VALUES
 (1, 2, 'asd', 'asd', 'ad', 'asd', 'asd', '2017-01-05', '2020-01-24', '', NULL, NULL, '', NULL),
 (2, 1, 'asd', 'asd', 'ad', 'asd', 'asd', '2017-01-05', '2020-01-24', '', NULL, NULL, '', NULL);
+
+-- Indexes for table `customer`
+
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`c_id`),
+  ADD UNIQUE KEY `v_id_2` (`v_id`),
+  ADD UNIQUE KEY `c_id` (`c_id`),
+  ADD UNIQUE KEY `invoice_id` (`invoice_id`),
+  ADD KEY `v_id` (`v_id`),
+  ADD KEY `c_id_2` (`c_id`);
