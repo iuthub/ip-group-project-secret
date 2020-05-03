@@ -28,11 +28,12 @@
 									</fieldset>
 								</form>
 							</div>
-
+                        </div>
 					</div>
 				</div><!-- /.col-->
 			</div><!-- /.row -->	
 		</div>
 	</div>	
 </body>
+
 </html>
