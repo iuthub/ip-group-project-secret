@@ -29,6 +29,11 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`u_id`),
   ADD UNIQUE KEY `email` (`u_email`);
 
+-- AUTO_INCREMENT for table `users`
+
+ALTER TABLE `users`
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 
 CREATE TABLE `customer` (
   `c_id` int(11) NOT NULL,
@@ -64,3 +69,58 @@ ALTER TABLE `customer`
   ADD UNIQUE KEY `invoice_id` (`invoice_id`),
   ADD KEY `v_id` (`v_id`),
   ADD KEY `c_id_2` (`c_id`);
+  
+  -- AUTO_INCREMENT for table `customer`
+
+ALTER TABLE `customer`
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+  -- Table structure for table `vehicle`
+
+
+CREATE TABLE `vehicle` (
+  `v_id` int(11) NOT NULL,
+  `manufacturer_name` varchar(100) NOT NULL,
+  `model_name` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `b_price` double NOT NULL,
+  `s_price` double DEFAULT NULL,
+  `mileage` double NOT NULL,
+  `add_date` date NOT NULL,
+  `sold_date` date DEFAULT NULL,
+  `status` varchar(40) NOT NULL,
+  `registration_year` int(11) NOT NULL,
+  `insurance_id` int(11) DEFAULT NULL,
+  `gear` varchar(100) NOT NULL,
+  `doors` int(11) NOT NULL,
+  `seats` int(11) NOT NULL,
+  `tank` float NOT NULL,
+  `image` varchar(400) DEFAULT NULL,
+  `e_no` varchar(40) NOT NULL,
+  `c_no` varchar(40) NOT NULL,
+  `u_id` int(11) DEFAULT NULL,
+  `v_color` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- Inserting data into table `vehicle`
+
+
+INSERT INTO `vehicle` (`v_id`, `manufacturer_name`, `model_name`, `category`, `b_price`, `s_price`, `mileage`, `add_date`, `sold_date`, `status`, `registration_year`, `insurance_id`, `gear`, `doors`, `seats`, `tank`, `image`, `e_no`, `c_no`, `u_id`, `v_color`) VALUES
+(1, 'LambourGini', 'JXER', 'asdasd', 2000, 2000, 200, '2016-12-08', NULL, 'Available', 2001, 121212, 'Auto', 0, 0, 0, NULL, '', '', NULL, NULL),
+(2, 'LambourGini', 'JXER', 'asdasd', 2000, 2000, 200, '2016-12-08', NULL, 'Available', 2001, 121212, 'Auto', 10, 10, 10, NULL, '10', '10', NULL, NULL);
+
+-- Indexes for table `vehicle`
+
+ALTER TABLE `vehicle`
+  ADD PRIMARY KEY (`v_id`),
+  ADD KEY `manufacturer_name` (`manufacturer_name`),
+  ADD KEY `model_name` (`model_name`),
+  ADD KEY `c_no` (`c_no`),
+  ADD KEY `u_id` (`u_id`);
+
+-- AUTO_INCREMENT for table `vehicle`
+
+ALTER TABLE `vehicle`
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+
