@@ -1,11 +1,11 @@
+
 <head>
  </head>
  <?php include 'links.php'; ?>
 <?php  include 'header.php'; ?>
 	<!-- popup -->
 	<div>
-button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <!-- Page Title -->
 		<div class="section section-breadcrumbs">
@@ -117,9 +117,7 @@ button onclick="document.getElementById('id01').style.display='block'" style="wi
 						</div>
 					</div>
 					<!-- End Blog Post Excerpt -->	
-
-										
-
+					
 				</div>
 			</div>
 	    </div>
@@ -127,8 +125,7 @@ button onclick="document.getElementById('id01').style.display='block'" style="wi
 
 	   	  	    <?php include 'footer.php'; ?>
 
-
         <!-- Javascripts -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/scrolling-nav.js"></script>	
     </body>
 </html>

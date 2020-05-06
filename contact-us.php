@@ -1,7 +1,10 @@
+
 <!--links css are included-->
 <?php include 'links.php'; ?>
+
 <!--header included-->
 <?php  include 'header.php'; ?>
+
 </header><!--/header-->
         <!-- Page Title -->
 		<div class="section section-breadcrumbs">
@@ -49,7 +52,12 @@
 	        	</div>
 	    	</div>
 	    </div>
+
 		<!--footer included-->
 		<?php include 'footer.php'; ?>
+
+		<!-- Javascripts -->
+		<script src="js/scrolling-nav.js"></script>
+		
     </body>
 </html>
