@@ -1,3 +1,9 @@
+
+<?php
+include_once 'login/dbconnect.php';
+$res=mysql_query("SELECT * FROM vehicle");
+$conn;?>
+
 <?php include 'links.php'?>
 <?php include 'header.php'?>
 	<body>
@@ -123,7 +129,7 @@
         }
     }
     </script>
-		<!-- Services -->
+
         <!-- Services -->
       <div class="section section-white">
       	<div class="container">
@@ -272,30 +278,7 @@
       	</div>
       </div>
 <hr>
-		<!-- Latest Cars -->	
-        <div class="section section-white">
-	        <div class="container">
-	        	<div class="row">
-	
-				<div class="section-title">
-				<h1>Our Recent Cars</h1>
-				</div>
-			<ul class="grid cs-style-3">
-            <div class="col-md-4 col-sm-6">
-    					<figure>
-    						<img src="login/uploads/<?php $path=explode("*",$Row['image']); echo $path[0]; ?>" height ="200" width="400" >
-    						<figcaption>
-    							<h3><?php echo $Row['model_name']; ?></h3>
-    							<span class="actual"><h5><i><strong>Starting MRP $<?php echo $Row['s_price']; ?></strong></i></h5></span>
-    							<a href="  ">Take a look</a>
-    						</figcaption>
-    					</figure>
-	        	</div>
-			</ul>
-	        	</div>
-	        </div>
-	    </div>
-		<!-- Latest Cars -->
+		<p>In process</p>
 <hr>
 		<!-- Manufacturer -->
 	    <div class="section">

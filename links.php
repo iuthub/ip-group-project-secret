@@ -18,3 +18,5 @@
 <link href="css/custom.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/popup1.css">
 <link rel="stylesheet" type="text/css" href="css/imgmodel.css">
+
+<script src="js/scrolling-nav.js"></script>
