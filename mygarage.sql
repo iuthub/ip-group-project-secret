@@ -18,7 +18,6 @@ CREATE TABLE `users` (
 
 -- Inserting data into table `users`
 
-
 INSERT INTO `users` (`u_id`, `su`, `u_email`, `f_name`, `l_name`, `u_bday`, `u_position`, `u_type`, `u_pass`, `u_mobile`, `u_gender`, `u_address`, `s_question`, `s_ans`) VALUES
 (9, 1, 'employee@employee.com', 'Mr', 'Employee', '2019-11-30', 'General Employee', 'Employee', 'fa5473530e4d1a5a1e1eb53d2fedb10c', '00202', 'Male', 'kkasd', NULL, NULL),
 (10, 1, 'admin@admin.com', 'Mr', 'Admin', '2019-11-30', 'Demo Admin', 'Admin', '21232f297a57a5a743894a0e4a801fc3', '00202', 'Male', 'kkasd', NULL, NULL);
@@ -33,7 +32,6 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 
 CREATE TABLE `customer` (
   `c_id` int(11) NOT NULL,
@@ -52,9 +50,7 @@ CREATE TABLE `customer` (
   `extra` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 -- Inserting data into table `customer`
-
 
 INSERT INTO `customer` (`c_id`, `v_id`, `cf_name`, `cl_name`, `c_email`, `c_mobile`, `nid`, `w_start`, `w_end`, `payment_type`, `invoice_id`, `c_address`, `c_pass`, `extra`) VALUES
 (1, 2, 'asd', 'asd', 'ad', 'asd', 'asd', '2017-01-05', '2020-01-24', '', NULL, NULL, '', NULL),
@@ -76,7 +72,6 @@ ALTER TABLE `customer`
   MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
   -- Table structure for table `vehicle`
-
 
 CREATE TABLE `vehicle` (
   `v_id` int(11) NOT NULL,
@@ -102,9 +97,7 @@ CREATE TABLE `vehicle` (
   `v_color` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 -- Inserting data into table `vehicle`
-
 
 INSERT INTO `vehicle` (`v_id`, `manufacturer_name`, `model_name`, `category`, `b_price`, `s_price`, `mileage`, `add_date`, `sold_date`, `status`, `registration_year`, `insurance_id`, `gear`, `doors`, `seats`, `tank`, `image`, `e_no`, `c_no`, `u_id`, `v_color`) VALUES
 (1, 'LambourGini', 'JXER', 'asdasd', 2000, 2000, 200, '2016-12-08', NULL, 'Available', 2001, 121212, 'Auto', 0, 0, 0, NULL, '', '', NULL, NULL),
@@ -124,3 +117,60 @@ ALTER TABLE `vehicle`
 ALTER TABLE `vehicle`
   MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
+-- Table structure for table `manufacturer`
+
+CREATE TABLE `manufacturer` (
+  `manufacturer_id` int(11) NOT NULL,
+  `manufacturer_name` varchar(100) NOT NULL,
+  `manufacturer_logo` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Inserting data into table `manufacturer`
+
+INSERT INTO `manufacturer` (`manufacturer_id`, `manufacturer_name`, `manufacturer_logo`) VALUES
+(30, 'BMW', NULL),
+(32, 'LambourGini', NULL),
+(33, 'Newww', NULL);
+
+-- Indexes for table `manufacturer`
+
+ALTER TABLE `manufacturer`
+  ADD PRIMARY KEY (`manufacturer_id`),
+  ADD UNIQUE KEY `manufacturer_name` (`manufacturer_name`),
+  ADD KEY `manufacturer_name_2` (`manufacturer_name`);
+
+-- AUTO_INCREMENT for table `manufacturer`
+
+ALTER TABLE `manufacturer`
+  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+-- Table structure for table `model`
+
+CREATE TABLE `model` (
+  `model_id` int(11) NOT NULL,
+  `model_name` varchar(100) NOT NULL,
+  `manufacturer_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Inserting data into table `model`
+
+INSERT INTO `model` (`model_id`, `model_name`, `manufacturer_name`) VALUES
+(27, 'JXER', 'BMW'),
+(28, 'FF23', 'LambourGini');
+
+-- Indexes for table `model`
+
+ALTER TABLE `model`
+  ADD PRIMARY KEY (`model_id`),
+  ADD UNIQUE KEY `model_name` (`model_name`),
+  ADD KEY `manufacturer_name` (`manufacturer_name`);
+
+-- AUTO_INCREMENT for table `model`
+
+ALTER TABLE `model`
+  MODIFY `model_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+-- Constraints for table `model`
+
+ALTER TABLE `model`
+  ADD CONSTRAINT `model_ibfk_1` FOREIGN KEY (`manufacturer_name`) REFERENCES `manufacturer` (`manufacturer_name`) ON DELETE CASCADE;
