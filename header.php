@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">Shop</a></li>
+                    <li><a href="Shop.php">Shop</a></li>
                     <li><a href="media.php">Media</a></li>
                     <li><a href="contact-us.php">Contact</a></li>
                     <li><a href="customer/index.php"><span class="glyphicon glyphicon-log-in"></span> Client Login</a></li>
