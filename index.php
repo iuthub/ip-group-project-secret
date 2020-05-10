@@ -78,7 +78,7 @@ $conn;?>
     <div>
     <div id="id001" class="modal">
       <div class="modal-dialog">
-      <form class="modal-content animate" action="  " method="POST">
+      <form class="modal-content animate" action="customer/registration.php" method="POST">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id001').style.display='none'" class="close" title="Close Modal">&times;</span>
           <H3 align="center">Sign up</H3>
