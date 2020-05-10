@@ -51,6 +51,15 @@
 
 	</div><!--/.sidebar-->
 		<!--/.main-->   
+	<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="js/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/lumino.glyphs.js"></script>
+
+	
 	<script>
 		$('#calendar').datepicker({
 		});

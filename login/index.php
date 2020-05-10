@@ -1,3 +1,41 @@
+
+<?php
+session_start();
+include_once 'dbconnect.php';
+
+if(isset($_SESSION['user'])!="")
+{
+	header("Location: dashboard.php");
+}
+
+if(isset($_POST['btn-login']))
+{
+	$email = mysql_real_escape_string($_POST['email']);
+	$upass = mysql_real_escape_string($_POST['password']);
+	
+	$email = trim($email);
+	$upass = trim($upass);
+	
+	$res=mysql_query("SELECT u_id, f_name, l_name, u_pass , u_type FROM users WHERE u_email='$email'");
+	$row=mysql_fetch_array($res);
+	
+	$count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+	
+	if($count == 1 && $row['u_pass']==md5($upass)&& $row['u_type']=="Admin")
+	{
+		$_SESSION['user'] = $row['u_id'];
+		header("Location: dashboard.php");
+	}
+	else
+	{
+		?>
+        <script>alert('Username or Password Is Wrong !');</script>
+        <?php
+	}
+	
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

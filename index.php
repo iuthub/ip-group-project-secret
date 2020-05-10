@@ -4,6 +4,7 @@ include_once 'login/dbconnect.php';
 $res=mysql_query("SELECT * FROM vehicle");
 $conn;?>
 
+<link rel="stylesheet" type="text/css" href="css/popup1.css">
 <?php include 'links.php'?>
 <?php include 'header.php'?>
 	<body>
@@ -278,7 +279,21 @@ $conn;?>
       	</div>
       </div>
 <hr>
-		<p>In process</p>
+		<!-- Latest Cars -->	
+        <div class="section section-white">
+	        <div class="container">
+	        	<div class="row">
+	
+				<div class="section-title">
+				<h1>Our Recent Cars</h1>
+				</div>
+			<ul class="grid cs-style-3">
+	        	<h1>In process . . .</h1>
+			</ul>
+	        	</div>
+	        </div>
+	    </div>
+		<!-- Latest Cars -->
 <hr>
 		<!-- Manufacturer -->
 	    <div class="section">

@@ -16,7 +16,9 @@
                     <li><a href="Shop.php">Shop</a></li>
                     <li><a href="media.php">Media</a></li>
                     <li><a href="contact-us.php">Contact</a></li>
+                    <!--Client Login-->
                     <li><a href="customer/index.php"><span class="glyphicon glyphicon-log-in"></span> Client Login</a></li>
+                    <!--Admin login-->
                     <li><a href="login/index.php"><span class="glyphicon glyphicon-log-in"></span>Admin Login</a></li> 
                 </ul>
             </div>
