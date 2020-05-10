@@ -8,5 +8,4 @@ if(!mysql_select_db("mygarage"))
 {
 	die('Databse Selection Error! Error code: '.mysql_error());
 }
-
 ?>
